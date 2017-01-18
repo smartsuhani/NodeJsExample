@@ -56,6 +56,26 @@ function user() {
             });
         });
     };
+
+    this.chk = function (pass,res) {
+        query1 = "select password from user where username = '" + pass.username + "'";
+        dbconn.aquire(function (err, con) {
+            con.query(query1, function (err, result) {
+                con.release();
+                if (err) {
+                    res.send({status: 1, message: 'Connection problem :' + err.toString()});
+                } else {
+                    //result = JSON.parse(result);
+                    //res.send({message : result[0].password});
+                    if (md5(pass.password) == result[0].password) {
+                        res.send(result[0].password + "success");
+                    } else {
+                        res.send("failed");
+                    }
+                }
+            });
+        });
+    };
 }
 
 module.exports = new user();
