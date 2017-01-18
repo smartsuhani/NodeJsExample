@@ -5,9 +5,9 @@ var dbconn = require("../core/db");
 var md5 = require('md5');
 
 function user() {
-    this.get =function (res) {
+    this.get =function (username,res) {
         dbconn.aquire(function (err,con) {
-            con.query('select * from user',function (err,result) {
+            con.query("select * from user where username = '"+username+"'",function (err,result) {
                 con.release();
                 res.send(result);
             });

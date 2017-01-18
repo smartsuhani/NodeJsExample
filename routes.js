@@ -3,7 +3,7 @@ var todo = require('./models/user');
 module.exports = {
     configure: function(app) {
         app.get('/user/', function(req, res) {
-            todo.get(res);
+            todo.get(req.query.username,res);
         });
 
         app.post('/user/', function(req, res) {
