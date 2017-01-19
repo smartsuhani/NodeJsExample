@@ -1,4 +1,10 @@
 var todo = require('./models/user');
+var mg = require('./models/userMG');
+var md5 = require('md5');
+var mongoose = require('mongoose');
+var user = require('./models/userMongoose');
+var url = "mongodb://127.0.0.1:27017/test";
+var u = new user();
 
 module.exports = {
     configure: function(app) {
@@ -21,5 +27,62 @@ module.exports = {
         app.post('/user/pass',function (req,res) {
             todo.chk(req.body,res);
         });
+
+        app.get('/mongo/',function (req,res) {
+            mg.get(res);
+        });
+
+        app.post('/mongo/',function (req,res) {
+            mongoose.connect(url);
+
+            u.fullname = req.body.firstname+" "+req.body.lastname;
+            u.username = req.body.username;
+            u.email_id = req.body.email_id;
+            u.password = md5(req.body.password);
+
+            u.save(function (err) {
+                if(err){
+                    res.send(err);
+                }else{
+                    res.send({message:"user successfully registered!"});
+                }
+            });
+        });
+
+        app.get('/mongoose/',function (req,res) {
+            user.find(function (err,data) {
+                if(err){
+                    res.send(err);
+                }else{
+                    console.log(data);
+                    res.send(data);
+                }
+            });
+        });
+
+        app.post('/mongoose/',function (req,res) {
+            mongoose.connect(url);
+            console.log(req.body.username)
+            user.find({"username" : req.body.username},function (err,data) {
+               if(err){
+                   res.send(err);
+               }else{
+                   res.send(data);
+               }
+            });
+        });
+
+        app.delete('/mongoose/',function (req,res) {
+            mongoose.connect(url);
+            user.remove({
+                username: req.params.username
+            }, function(err, bear) {
+                if (err)
+                    res.send(err);
+                else
+                    res.json({ message: 'Successfully deleted' });
+            });
+        });
+
     }
 };
