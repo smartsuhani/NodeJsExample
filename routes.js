@@ -5,6 +5,7 @@ var mongoose = require('mongoose');
 var user = require('./models/userMongoose');
 var url = "mongodb://127.0.0.1:27017/test";
 var u = new user();
+mongoose.connect(url);
 
 module.exports = {
     configure: function(app) {
@@ -33,7 +34,6 @@ module.exports = {
         });
 
         app.post('/mongo/',function (req,res) {
-            mongoose.connect(url);
 
             u.fullname = req.body.firstname+" "+req.body.lastname;
             u.username = req.body.username;
@@ -61,7 +61,7 @@ module.exports = {
         });
 
         app.post('/mongoose/',function (req,res) {
-            mongoose.connect(url);
+
             console.log(req.body.username)
             user.find({"username" : req.body.username},function (err,data) {
                if(err){
@@ -72,14 +72,16 @@ module.exports = {
             });
         });
 
-        app.delete('/mongoose/',function (req,res) {
-            mongoose.connect(url);
+        app.delete('/mongoose',function (req,res) {
+            console.log(req.body.username);
             user.remove({
-                username: req.params.username
-            }, function(err, bear) {
+                "username": req.body.username
+
+            }, function(err, data) {
                 if (err)
                     res.send(err);
                 else
+
                     res.json({ message: 'Successfully deleted' });
             });
         });

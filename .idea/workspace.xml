@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6638e5a8-565b-4726-975b-664ef3f25942" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/models/userMG.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/models/userMongoose.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/1.html" afterPath="$PROJECT_DIR$/1.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes.js" afterPath="$PROJECT_DIR$/routes.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -35,21 +31,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
-              <caret line="5" column="6" lean-forward="true" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+              <caret line="5" column="6" lean-forward="false" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routes.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="routes.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="307">
-              <caret line="79" column="18" lean-forward="false" selection-start-line="77" selection-start-column="16" selection-end-line="79" selection-end-column="18" />
+            <state relative-caret-position="217">
+              <caret line="77" column="36" lean-forward="false" selection-start-line="77" selection-start-column="36" selection-end-line="77" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -58,8 +54,8 @@
       <file leaf-file-name="1.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/1.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="30" column="38" lean-forward="true" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
+            <state relative-caret-position="60">
+              <caret line="4" column="39" lean-forward="false" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -112,7 +108,7 @@
       <file leaf-file-name="user.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/user.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-105">
+            <state relative-caret-position="75">
               <caret line="7" column="35" lean-forward="false" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
               <folding>
                 <element signature="e#0#43#0" expanded="false" />
@@ -194,8 +190,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -224,6 +218,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -243,9 +239,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Node.js.app.js (1)">
-    <configuration default="false" name="app.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="$PROJECT_DIR$/data.js" working-dir="$PROJECT_DIR$">
-      <method />
-    </configuration>
     <configuration default="false" name="db.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="db.js" working-dir="$PROJECT_DIR$/core">
       <method />
     </configuration>
@@ -256,6 +249,9 @@
       <method />
     </configuration>
     <configuration default="false" name="routes.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="routes.js" working-dir="$PROJECT_DIR$">
+      <method />
+    </configuration>
+    <configuration default="false" name="1.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/NodeJsExample/1.html">
       <method />
     </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
@@ -318,19 +314,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Node.js.app.js" />
-      <item index="1" class="java.lang.String" itemvalue="Node.js.db.js" />
-      <item index="2" class="java.lang.String" itemvalue="Node.js.app.js (1)" />
-      <item index="3" class="java.lang.String" itemvalue="Node.js.user.js" />
-      <item index="4" class="java.lang.String" itemvalue="Node.js.routes.js" />
+      <item index="0" class="java.lang.String" itemvalue="Node.js.db.js" />
+      <item index="1" class="java.lang.String" itemvalue="Node.js.app.js (1)" />
+      <item index="2" class="java.lang.String" itemvalue="Node.js.user.js" />
+      <item index="3" class="java.lang.String" itemvalue="Node.js.routes.js" />
+      <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.1.html" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Node.js.app.js (1)" />
-        <item index="1" class="java.lang.String" itemvalue="Node.js.routes.js" />
-        <item index="2" class="java.lang.String" itemvalue="Node.js.user.js" />
-        <item index="3" class="java.lang.String" itemvalue="Node.js.db.js" />
-        <item index="4" class="java.lang.String" itemvalue="Node.js.app.js" />
+        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.1.html" />
+        <item index="2" class="java.lang.String" itemvalue="Node.js.routes.js" />
+        <item index="3" class="java.lang.String" itemvalue="Node.js.user.js" />
+        <item index="4" class="java.lang.String" itemvalue="Node.js.db.js" />
       </list>
     </recent_temporary>
   </component>
@@ -350,7 +346,9 @@
       <workItem from="1484634604661" duration="9251000" />
       <workItem from="1484646452554" duration="7197000" />
       <workItem from="1484732680949" duration="9495000" />
-      <workItem from="1484810898458" duration="13898000" />
+      <workItem from="1484810898458" duration="14257000" />
+      <workItem from="1484832258698" duration="968000" />
+      <workItem from="1484833327882" duration="232000" />
     </task>
     <task id="LOCAL-00001" summary="KunjalTandel : new directory for database connection = &quot;../models/user.js&quot;">
       <created>1484634733237</created>
@@ -401,11 +399,18 @@
       <option name="project" value="LOCAL" />
       <updated>1484814141209</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="database connectivity and operations with mongodb using mongoose and mongoDB module">
+      <created>1484831048169</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1484831048169</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51720000" />
+    <option name="totallyTimeSpent" value="53279000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1301" height="744" extended-state="6" />
@@ -444,7 +449,8 @@
     <MESSAGE value="In user.js : line 8 arg added for specific user, line 10 where condition in query&#10;in routes.js : line 6 arg added in function call" />
     <MESSAGE value="In user.js : line 59-78 function chk for login&#10;in routes.js : line 20-23 new end point for login" />
     <MESSAGE value="server starting message changed" />
-    <option name="LAST_COMMIT_MESSAGE" value="server starting message changed" />
+    <MESSAGE value="database connectivity and operations with mongodb using mongoose and mongoDB module" />
+    <option name="LAST_COMMIT_MESSAGE" value="database connectivity and operations with mongodb using mongoose and mongoDB module" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -715,23 +721,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="12" column="19" lean-forward="false" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/mongo/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1792">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/mongo/index.js" />
     <entry file="file://$PROJECT_DIR$/node_modules/mongoose/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-4536">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -739,17 +736,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/user.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-105">
-          <caret line="7" column="35" lean-forward="false" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#43#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -765,7 +751,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="117">
           <caret line="447" column="27" lean-forward="false" selection-start-line="447" selection-start-column="26" selection-end-line="447" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -773,6 +758,21 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="328">
           <caret line="1647" column="0" lean-forward="true" selection-start-line="1647" selection-start-column="0" selection-end-line="1647" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="39" lean-forward="false" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/db.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="11" lean-forward="false" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
           <folding />
         </state>
       </provider>
@@ -787,11 +787,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/1.html">
+    <entry file="file://$PROJECT_DIR$/models/userMongoose.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="30" column="38" lean-forward="true" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
-          <folding />
+        <state relative-caret-position="105">
+          <caret line="9" column="20" lean-forward="true" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#43#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -803,36 +805,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/db.js">
+    <entry file="file://$PROJECT_DIR$/models/user.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="11" lean-forward="false" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/userMongoose.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="9" column="20" lean-forward="true" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+        <state relative-caret-position="75">
+          <caret line="7" column="35" lean-forward="false" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
           <folding>
             <element signature="e#0#43#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes.js">
+    <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="79" column="18" lean-forward="false" selection-start-line="77" selection-start-column="16" selection-end-line="79" selection-end-column="18" />
+        <state relative-caret-position="75">
+          <caret line="5" column="6" lean-forward="false" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
+    <entry file="file://$PROJECT_DIR$/routes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="6" lean-forward="true" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+        <state relative-caret-position="217">
+          <caret line="77" column="36" lean-forward="false" selection-start-line="77" selection-start-column="36" selection-end-line="77" selection-end-column="36" />
           <folding />
         </state>
       </provider>
