@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p style="font-size: 14pt;">Register User</p>
+<form action="http://127.0.0.1:8085/user" method="POST">
+    First name:<br>
+    <input type="text" name="firstname">
+    <br>
+    Last name:<br>
+    <input type="text" name="lastname"><br>
+    username:<br>
+    <input type="text" name="username"><br>
+    Email Id:<br>
+    <input type="text" name="email_id"><br>
+    Password:<br>
+    <input type="password" name="password"><br>
+    Contact No:<br>
+    <input type="number" maxlength="10" name="contact_no">
+    <br><br>
+    <input type="submit" value="Submit">
+</form>
+<p style="font-size: 14pt;">Authenticate the User</p>
+<form action="http://127.0.0.1:8085/user/pass" method="POST">
+    <input type="text" name="username">
+    <br><br>
+    <input type="password" name="password">
+    <br><br>
+    <input type="submit" value="Submit">
+</form>
+<p style="font-size: 14pt;">Fetch User</p>
+<form action="http://127.0.0.1:8085/user/" method="GET">
+    <input type="text" name="username">
+    <br><br>
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>

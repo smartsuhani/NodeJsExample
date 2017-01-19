@@ -17,5 +17,9 @@ module.exports = {
         app.delete('/user/:username/', function(req, res) {
             todo.delete(req.params.username, res);
         });
+
+        app.post('/user/pass',function (req,res) {
+            todo.chk(req.body,res);
+        });
     }
 };
