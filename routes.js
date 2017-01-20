@@ -4,7 +4,6 @@ var md5 = require('md5');
 var mongoose = require('mongoose');
 var user = require('./models/userMongoose');
 var url = "mongodb://127.0.0.1:27017/test";
-var u = new user();
 mongoose.connect(url);
 
 module.exports = {
@@ -35,11 +34,13 @@ module.exports = {
 
         app.post('/mongo/',function (req,res) {
 
+            var u = new user();
+
             u.fullname = req.body.firstname+" "+req.body.lastname;
             u.username = req.body.username;
             u.email_id = req.body.email_id;
-            u.password = md5(req.body.password);
-
+            u.password = req.body.password;
+            console.log(req.body.username);
             u.save(function (err) {
                 if(err){
                     res.send(err);
@@ -82,7 +83,7 @@ module.exports = {
                     res.send(err);
                 else
 
-                    res.json({ message: 'Successfully deleted' });
+                    res.json({ message: 'Successfully deleted' },data);
             });
         });
 
