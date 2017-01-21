@@ -1,5 +1,19 @@
 <!DOCTYPE html>
 <html>
+<head>
+<script>
+    function register() {
+        var doc = document.forms[0];
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+            alert(xhttp.response);
+        };
+        xhttp.open("POST","http://127.0.0.1:8085/mongo/",true);
+        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhttp.send("firstname="+doc.firstname.value+"&lastname="+doc.lastname.value+"&username="+doc.username.value+"&email_id="+doc.email_id.value+"&password="+doc.password.value);
+    }
+</script>
+</head>
 <body>
 <p style="font-size: 14pt;">Register User</p>
 <form action="http://127.0.0.1:8085/mongo" method="POST">
@@ -17,7 +31,7 @@
     Contact No:<br>
     <input type="number" maxlength="10" name="contact_no">
     <br><br>
-    <input type="submit" value="Submit">
+    <input type="button" value="Submit" onclick="register()">
 </form>
 <p style="font-size: 14pt;">Authenticate the User</p>
 <form action="http://127.0.0.1:8085/user/pass" method="POST">
