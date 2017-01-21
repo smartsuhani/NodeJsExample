@@ -4,8 +4,8 @@ var md5 = require('md5');
 var mongoose = require('mongoose');
 var user = require('./models/userMongoose');
 var url = "mongodb://127.0.0.1:27017/test";
-var u = new user();
 mongoose.connect(url);
+
 
 module.exports = {
     configure: function(app) {
@@ -34,19 +34,34 @@ module.exports = {
         });
 
         app.post('/mongo/',function (req,res) {
-
-            u.fullname = req.body.firstname+" "+req.body.lastname;
-            u.username = req.body.username;
-            u.email_id = req.body.email_id;
-            u.password = md5(req.body.password);
-
-            u.save(function (err) {
-                if(err){
-                    res.send(err);
-                }else{
-                    res.send({message:"user successfully registered!"});
+            console.log(req.body);
+            if(req.body.username == "" || req.body.email_id == "" || req.body.password == "" || req.body.firstname == "" || req.body.lastname==""
+                || req.body.username == undefined || req.body.email_id == undefined || req.body.password == undefined || req.body.firstname == undefined || req.body.lastname==undefined){
+                if(req.body.username == "" || req.body.username == undefined){
+                    res.send("Username field required!");
+                }else if(req.body.firstname == "" || req.body.firstname == undefined){
+                    res.send("firstname field required!");
+                }else if(req.body.lastname == "" || req.body.lastname == undefined){
+                    res.send("lastname field required!");
+                }else if(req.body.password == "" || req.body.password == undefined){
+                    res.send("password field required!");
+                }else if(req.body.email_id == "" || req.body.email_id == undefined){
+                    res.send("email_id field required!");
                 }
-            });
+            }else{
+                var u = new user();
+                u.password = req.body.password;
+                u.email_id = req.body.email_id;
+                u.username = req.body.username;
+                u.fullname = req.body.firstname + " " + req.body.lastname;
+                u.save(function (err) {
+                    if (err) {
+                        res.send(err);
+                    } else {
+                        res.send({message: "user successfully registered!"});
+                    }
+                });
+            }
         });
 
         app.get('/mongoose/',function (req,res) {
@@ -82,7 +97,7 @@ module.exports = {
                     res.send(err);
                 else
 
-                    res.json({ message: 'Successfully deleted' });
+                    res.json({ message: 'Successfully deleted' },data);
             });
         });
 
