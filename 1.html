@@ -34,7 +34,7 @@
     <input type="button" value="Submit" onclick="register()">
 </form>
 <p style="font-size: 14pt;">Authenticate the User</p>
-<form action="http://127.0.0.1:8085/user/pass" method="POST">
+<form action="http://127.0.0.1:8085/mongoose/login" method="POST">
     <input type="text" name="username">
     <br><br>
     <input type="password" name="password">
@@ -42,7 +42,7 @@
     <input type="submit" value="Submit">
 </form>
 <p style="font-size: 14pt;">Fetch User</p>
-<form action="http://127.0.0.1:8085/mongoose/" method="GET">
+<form action="http://127.0.0.1:8085/mongoose/fetchone" method="POST">
     <input type="text" name="username">
     <br><br>
     <input type="submit" value="Submit">

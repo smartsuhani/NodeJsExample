@@ -1,9 +1,10 @@
 var todo = require('./models/user');
 var mg = require('./models/userMG');
 var md5 = require('md5');
+var jwt = require('jsonwebtoken');
 var mongoose = require('mongoose');
 var user = require('./models/userMongoose');
-var url = "mongodb://127.0.0.1:27017/post";
+var url = "mongodb://127.0.0.1:27017/test";
 mongoose.connect(url);
 
 
@@ -33,7 +34,7 @@ module.exports = {
             mg.get(res);
         });
 
-        app.post('/mongo/', function (req, res) {
+        app.post('/mongo/reg', function (req, res) {
             console.log(req.body);
             if (req.body.username == "" || req.body.email_id == "" || req.body.password == "" || req.body.firstname == "" || req.body.lastname == ""
                 || req.body.username == undefined || req.body.email_id == undefined || req.body.password == undefined || req.body.firstname == undefined
@@ -72,7 +73,7 @@ module.exports = {
             }
         });
 
-        app.get('/mongoose/', function (req, res) {
+        app.get('/mongoose/fetchall', function (req, res) {
             user.find(function (err, data) {
                 if (err) {
                     res.send(err);
@@ -83,7 +84,7 @@ module.exports = {
             });
         });
 
-        app.post('/mongoose/', function (req, res) {
+        app.post('/mongoose/fetchone', function (req, res) {
 
             console.log(req.body.username)
             user.find({"username": req.body.username}, function (err, data) {
@@ -95,7 +96,28 @@ module.exports = {
             });
         });
 
-        app.delete('/mongoose', function (req, res) {
+        app.post('/mongoose/login', function (req, res) {
+
+            console.log(req.body.username)
+            user.find({"username": req.body.username}, function (err, data) {
+                if (err) {
+                    res.send(err);
+                } else {
+                    if(data.length == 0){
+                        res.send("user not found!");
+                    }else{
+                        if(data[0].password == req.body.password){
+                            var token1 =  jwt.sign({username:data[0].username},app.get('token'),{expiresIn:'10s'});
+                            res.send({success:true,message:"successfully logged in",token:token1});
+                        }else{
+                            res.send({success:false,message:"authentication failed"});
+                        }
+                    }
+                }
+            });
+        });
+
+        app.delete('/mongoose/rmone', function (req, res) {
             console.log(req.body.username);
             user.remove({
                 "username": req.body.username
