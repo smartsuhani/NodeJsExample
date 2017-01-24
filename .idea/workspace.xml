@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6638e5a8-565b-4726-975b-664ef3f25942" name="Default" comment="jsonwebtoken implementation for client authentication.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/models/file.js" />
+    <list default="true" id="6638e5a8-565b-4726-975b-664ef3f25942" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/01 Ishq Kiya Kiya _1485249872945.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/pic_bulboff_1485244875578.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/pic_bulboff_1485244926304.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/pic_bulboff_1485245390651.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/pic_bulbon_1485249098570.gif" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes.js" afterPath="$PROJECT_DIR$/routes.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -57,8 +60,8 @@
       <file leaf-file-name="routes.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="179" column="71" lean-forward="true" selection-start-line="179" selection-start-column="71" selection-end-line="179" selection-end-column="71" />
+            <state relative-caret-position="158">
+              <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="24" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -385,7 +388,7 @@
       <workItem from="1484974867203" duration="7186000" />
       <workItem from="1485146747457" duration="11342000" />
       <workItem from="1485234277332" duration="3777000" />
-      <workItem from="1485238806551" duration="6911000" />
+      <workItem from="1485238806551" duration="7182000" />
     </task>
     <task id="LOCAL-00001" summary="KunjalTandel : new directory for database connection = &quot;../models/user.js&quot;">
       <created>1484634733237</created>
@@ -478,11 +481,18 @@
       <option name="project" value="LOCAL" />
       <updated>1485174138691</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="filepath insertion in database and simple file download code using res.sendfile().">
+      <created>1485250085576</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1485250085576</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="103109000" />
+    <option name="totallyTimeSpent" value="103380000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -555,7 +565,8 @@
     <MESSAGE value="validation on data insert function in routes.js" />
     <MESSAGE value="id auto increment on data insertion.&#10;connection with javascript using ajax." />
     <MESSAGE value="jsonwebtoken implementation for client authentication." />
-    <option name="LAST_COMMIT_MESSAGE" value="jsonwebtoken implementation for client authentication." />
+    <MESSAGE value="filepath insertion in database and simple file download code using res.sendfile()." />
+    <option name="LAST_COMMIT_MESSAGE" value="filepath insertion in database and simple file download code using res.sendfile()." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -917,8 +928,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="179" column="71" lean-forward="true" selection-start-line="179" selection-start-column="71" selection-end-line="179" selection-end-column="71" />
+        <state relative-caret-position="158">
+          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="24" selection-end-column="3" />
           <folding />
         </state>
       </provider>
