@@ -41,7 +41,7 @@ function user() {
 
     this.update = function(user, res) {
         query1 = "update user set username = '"+user.newname+"' where username = '"+user.oldname+"'";
-        connection.aquire(function(err, con) {
+        dbconn.aquire(function(err, con) {
             con.query(query1, function(err, result) {
                 con.release();
                 if (err) {
@@ -55,7 +55,7 @@ function user() {
 
     this.delete = function(username, res) {
         query1  = "delete from user where username = '"+username+"'";
-        connection.aquire(function(err, con) {
+        dbconn.aquire(function(err, con) {
             con.query(query1, function(err, result) {
                 con.release();
                 if (err) {

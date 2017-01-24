@@ -10,7 +10,8 @@ var user = new schema({
     password:{type : String, required : true, unique : false},
     email_id:{type : String, required : true, unique : true},
     username:{type : String, required : true, unique : true},
-    fullname:{type : String, required : true, unique : false}
+    fullname:{type : String, required : true, unique : false},
+    user_id :{type : String, required : true, unique : true}
 });
 
 module.exports = mongoose.model('user1',user);
