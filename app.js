@@ -4,7 +4,6 @@ var connection = require('./core/db');
 var routes = require('./routes');
 var morgan = require('morgan');
 
-
 var app = express();
 
 app.set('token','A((e$$@me');
