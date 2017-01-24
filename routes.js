@@ -5,17 +5,22 @@ var jwt = require('jsonwebtoken');
 var mongoose = require('mongoose');
 var multer = require('multer');
 var user = require('./models/userMongoose');
+var pic = require('./models/file');
+var path = require('path');
+var fs = require('fs');
 var url = "mongodb://127.0.0.1:27017/test";
 mongoose.connect(url);
 
 var storage  = multer.diskStorage({
     destination:function (req,file,callback) {
+        req.body.path = "./uploads/";
         callback(null,'./uploads/');
     },
     filename:function (req,file,callback) {
         console.log(file);
         file1=file.originalname.split(".");
-        callback(null,file1[0]+"_"+Date.now()+"."+file1[1]);
+        req.body.file = file1[0]+"_"+Date.now()+"."+file1[file1.length -1];
+        callback(null,req.body.file);
     }
 });
 
@@ -151,11 +156,30 @@ module.exports = {
                     console.log('Error Occured');
                     return;
                 }
-                console.log(req.file);
+                console.log("hello  :"+req.body.file);
                 res.end('Your File Uploaded');
                 console.log('Photo Uploaded');
+                var pic1 = new pic();
+                pic1.pic_name = req.body.file;
+                pic1.pic_path = req.body.path+req.body.file;
+
+                pic1.save(function (err,data) {
+                    if(err) {
+                        console.log(err);
+                    }else{
+                        console.log(data);
+                    }
+                });
             });
         });
-
+        app.get('/download/',function (req,res) {
+            pic.find(function (err,data) {
+                if(err){
+                    res.send("error to fetch file!");
+                }else{
+                    res.sendFile(path.join(__dirname,data[data.length-1].pic_path));
+                }
+            });
+        });
     }
 };
