@@ -8,9 +8,10 @@ var user = require('./models/userMongoose');
 var pic = require('./models/file');
 var path = require('path');
 var fs = require('fs');
-var url = "mongodb://127.0.0.1:27017/test";
+var url = "mongodb://127.0.0.1:27017/temp";
 mongoose.connect(url);
-
+var page = 0;
+var limit = 10;
 var storage  = multer.diskStorage({
     destination:function (req,file,callback) {
         req.body.path = "./uploads/";
@@ -71,6 +72,7 @@ module.exports = {
                 }
             } else {
                 var u = new user();
+                u.pic = "./uploads/pic_bulboff_1485244875578.gif"
                 u.password = req.body.password;
                 u.email_id = req.body.email_id;
                 u.username = req.body.username;
@@ -92,15 +94,21 @@ module.exports = {
             }
         });
 
-        app.get('/mongoose/fetchall', function (req, res) {
+        app.get('/mongoose/fetchall/:pageNum', function (req, res) {
+            var pageNumber = parseInt(req.params.pageNum);
             user.find(function (err, data) {
                 if (err) {
                     res.send(err);
                 } else {
-                    console.log(data);
-                    res.send(data);
+                    if(data.length != 0){
+                        console.log("{\nuser:[\n"+data+"\n]\n}");
+                        res.send("{\n\"user\":"+JSON.stringify(data)+"\n}");
+                        page++;
+                    }else{
+                        res.send({stop: 100});
+                    }
                 }
-            });
+            }).limit(limit).skip(limit * pageNumber);
         });
 
         app.post('/mongoose/fetchone', function (req, res) {
@@ -180,6 +188,19 @@ module.exports = {
                     res.sendFile(path.join(__dirname,data[data.length-1].pic_path));
                 }
             });
+        });
+
+        app.get('/',function (req,res) {
+            res.send("hello get");
+        });
+        app.post('/',function (req,res) {
+            res.send("hello post");
+        });
+        app.delete('/',function (req,res) {
+            res.send("hello delete");
+        });
+        app.put('/',function (req,res) {
+            res.send("hello put");
         });
     }
 };
